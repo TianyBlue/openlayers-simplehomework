@@ -1,7 +1,7 @@
 # 使用openlayers和vite的一个小网页
 WebGIS 课程作业
- 
-运行ol2bash.sh进行build:
+
+更改ol2bash.sh并运行ol2bash.sh进行build:
 
     ./ol2bash.sh
 
