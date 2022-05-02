@@ -85,7 +85,6 @@ export var quitCreatePoint = function(){
 }
 
 function sendJson(body){
-    console.log(body);
     $.ajax({
         url: '/project/AddPointsToDB',
         type: "POST",

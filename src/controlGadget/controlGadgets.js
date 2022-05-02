@@ -13,7 +13,7 @@ var scalecontrol = new scaleLine({
 
 var mousePositionControl = new MousePosition({
     className: 'mosuePosition',
-    coordinateFormat: createStringXY(6),
+    coordinateFormat: createStringXY(5),
     projection: 'EPSG:4326',
     target: document.getElementById('position')
 });

@@ -3,16 +3,16 @@ import Circle from "ol/style/Circle"
 import Fill from "ol/style/Fill";
 import Stroke from "ol/style/Stroke";
 
-var pointRedStyle = new Style({
+let pointRedStyle = new Style({
     image: new Circle({
-        radius: 10,
+        radius: 6,
         fill: new Fill({
             color:'#dc143c'
         })
     })
 });
 
-var polygonRedStyle = new Style({
+let polygonRedStyle = new Style({
     stroke: new Stroke({
         color: '#dc143c',
         width: 1.25
@@ -22,7 +22,6 @@ var polygonRedStyle = new Style({
     }),
     zIndex: 999
 });
-
 
 export var fillRedToPoint=function(feature){
     feature.setStyle(pointRedStyle);

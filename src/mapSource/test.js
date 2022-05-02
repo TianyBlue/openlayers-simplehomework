@@ -27,7 +27,7 @@ export var addVectorLayer = function(name){
                 source: mapSource[name],
             });
             map.addLayer(layer);
-            break;
+            return layer;
         }
     }
 }

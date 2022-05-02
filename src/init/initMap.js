@@ -3,8 +3,6 @@ import { Map } from "ol";
 import TileLayer from "ol/layer/Tile";
 import XYZ from 'ol/source/XYZ';
 import View from 'ol/View';
-import { defaults } from 'ol/control';
-import FullScreen from 'ol/control/FullScreen';
 
 // var cityurl = 'http://localhost:31142/geoserver/dbtest/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dbtest%3Achncityxy&maxFeatures=1500&outputFormat=application%2Fjson';
 
@@ -19,8 +17,8 @@ var tdVec = new TileLayer({
 export var layers = [tdVec]
 
 var normalView = new View({
-    center: [116.0, 26.0],
-    zoom: 12,
+    center: [114.5, 30.5],
+    zoom: 8,
     projection: 'EPSG:4326'
 });
 

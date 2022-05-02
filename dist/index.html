@@ -2,99 +2,129 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using OpenLayers with Vite</title>
-  
-  
-  <style>
-    @font-face {
-      font-family: 'icomoon';
-      src: url('./fonts/icomoon.eot?q7nwb3');
-      src: url('./fonts/icomoon.eot?q7nwb3#iefix') format('embedded-opentype'),
-        url('./fonts/icomoon.ttf?q7nwb3') format('truetype'),
-        url('./fonts/icomoon.woff?q7nwb3') format('woff'),
-        url('./fonts/icomoon.svg?q7nwb3#icomoon') format('svg');
-      font-weight: normal;
-      font-style: normal;
-      font-display: block;
-    }
-  </style>
-  <script type="module" crossorigin src="./assets/index.a211d6a1.js"></script>
-  <link rel="modulepreload" href="./assets/vendor.82360beb.js">
-  <link rel="stylesheet" href="./assets/index.3744e8fc.css">
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Using OpenLayers with Vite</title>
+	
+	
+	<style>
+		@font-face {
+			font-family: 'icomoon';
+			src: url('fonts/icomoon.eot?6cdnmn');
+			src: url('fonts/icomoon.eot?6cdnmn#iefix') format('embedded-opentype'),
+				url('fonts/icomoon.ttf?6cdnmn') format('truetype'),
+				url('fonts/icomoon.woff?6cdnmn') format('woff'),
+				url('fonts/icomoon.svg?6cdnmn#icomoon') format('svg');
+			font-weight: normal;
+			font-style: normal;
+			font-display: block;
+		}
+	</style>
+  <script type="module" crossorigin src="./assets/index.00994a9f.js"></script>
+  <link rel="modulepreload" href="./assets/vendor.d1bde9bf.js">
+  <link rel="stylesheet" href="./assets/index.5e129854.css">
 </head>
 
 <body>
-  <div class="page">
-    <div class="header">
-      <h1>OpenLayers 测试程序</h1>
-    </div>
-    <div class="main">
-      <div class="leftbar">
-        <div class="nav" id="son">
-          <a href="#">小组介绍</a>
-          <a href="#">所修课程</a>
-          <a href="#">地图</a>
-          <a href="#">000</a>
-          <a href="#">111</a>
-        </div>
-        <div class="pic-nav">
-          <a href="#">
-            <span></span>
-          </a>
-          <a href="#">
-            <span></span>
-          </a>
-          <a href="#">
-            <span></span>
-          </a>
-          <a href="#">
-            <span></span>
-          </a>
-          <a href="#">
-            <span></span>
-          </a>
-        </div>
-        <div class="searchBar">
-          <input type="text" />
-          <button>搜索</button>
-          <div class="searchState"></div>
-        </div>
-        <div class="info-bar">
-          <button>获得密度信息</button>
-          <div class="info"></div>
-        </div>
-      </div>
-      <div class="main-map">
-        <div class="tool-bar">
-          <button class="create-point">
-            point
-          </button>
-          <button class="quit-create">
-            quit
-          </button>
-        </div>
-        <div class="map" id="map">
-          <div class="layerControl">
-            <h4>图层列表</h4>
-            <ul class="layers"></ul>
-          </div>
-          <div id="addinbar">
-            <div id="scalebar"></div>
-            <div id="position"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      这是页底信息
-    </div>
-  </div>
-  
-  <script>
-  </script>
+	<div class="page">
+		<div class="header">
+			<h1>OpenLayers 测试程序</h1>
+		</div>
+		<div class="main">
+			<div class="leftbar">
+				<div class="nav" id="son">
+					<a href="#" class="group-page">小组介绍</a>
+					<a href="#" class="courses-page">所修课程</a>
+					<a href="#" class="map-page">地图</a>
+					<a href="#" class="contact-page">联系方式</a>
+					<a href="#" class="tools-used-page">所用技术</a>
+				</div>
+				<div class="pic-nav">
+					<a href="#">
+						<span style="font-size: 26px;"></span>
+					</a>
+					<a href="#">
+						<span></span>
+					</a>
+					<a href="#">
+						<span></span>
+					</a>
+					<a href="#">
+						<span></span>
+					</a>
+					<a href="#">
+						<span></span>
+					</a>
+				</div>
+				<div class="info-bar">
+					<div class="info-name">日志</div>
+					<div class="info"></div>
+				</div>
+			</div>
+
+			<div class="main-map">
+				<div class="tool-bar">
+					<div class="searchBar">
+						<input type="text" />
+						<button class="search" style="font-family: icomoon;"></button>
+					</div>
+					<div class="tools">
+						<button class="density">获得密度信息</button>
+						<button class="open-city-info" style="font-family: icomoon;"></button>
+						<button class="create-point" style="font-family: icomoon;">
+							
+						</button>
+						<button class="quit-create" style="font-family: icomoon;">
+							
+						</button>
+					</div>
+				</div>
+				<div class="map" id="map">
+					<div class="layerControl">
+						<h4>图层列表</h4>
+						<ul class="layers"></ul>
+					</div>
+					<div id="addinbar">
+						<div id="scalebar"></div>
+						<div id="position"></div>
+					</div>
+					<div class="city-info">
+						<div class="info-name">
+							城市信息
+						</div>
+						<div class="info-content">
+							<div class="name">城市名:<span></span></div>
+							<div class="pop">人口(万人):<span></span></div>
+							<div class="gdp">GDP(万元):<span></span></div>
+							<div class="ave_gdp">人均GDP(元):<span></span></div>
+							<div class="increase_ratio">GDP增长率(%):<span></span></div>
+							<div class="construction_land">建设用地(km<sup>2</sup>):<span></span></div>
+							<div class="inhabitant_land">居住用地(km<sup>2</sup>):<span></span></div>
+							<div class="con_land_per">建设用地(%):<span></span></div>
+							<div class="nearest_city">最近城市:<span style="color:black;font-weight:bold"></span></div>
+							<div class="distance">距离(km):<span style="color:black;font-weight:bold"></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="group-info">小组成员</div>
+
+			<div class="courses-info">所修课程</div>
+
+			<div class="contact-info">联系方式</div>
+
+			<div class="tools-used-info">所用技术</div>
+		</div>
+
+		<div class="footer">
+			这是页底信息
+		</div>
+	</div>
+	
+	<script>
+	</script>
 </body>
 
 </html>

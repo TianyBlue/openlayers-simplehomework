@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+ul {
+    list-style: none;
+}
+
 html {
     height: 100%;
     width: 100%;
@@ -25,7 +29,7 @@ body {
     top: 80px;
     width: 150px;
     padding: 20px 15px;
-    background-color: rgba(0, 136, 136, 0.6);
+    background-color: rgba(204, 204, 204, 0.6);
     border-radius: 10px;
     z-index: 9999;
 }
@@ -57,17 +61,13 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* text-align: center; */
 }
-
 
 .header {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: paleturquoise; */
 }
 
 .main {
@@ -76,24 +76,15 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    /* background-color: antiquewhite; */
 }
-
-/* .footer {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 .leftbar {
     position: relative;
     height: 100%;
     flex: 1;
-    /* background-color: blue; */
 }
 
-.main-map {
+.main-map,.group-info,.courses-info,.contact-info,.tools-used-info {
     flex: 4;
     display: flex;
     flex-direction: column;
@@ -101,9 +92,13 @@ body {
     margin-right: 2%;
 }
 
+.main-map {
+    border: 1px solid #ccc;
+}
+
 .tool-bar {
     flex: 1;
-    background-color: antiquewhite;
+    position: relative;
 }
 
 .map {
@@ -115,8 +110,8 @@ body {
     display: none;
     position: absolute;
     top: 10%;
-    left: -80%;
-    width: 100%;
+    left: -70%;
+    width: 90%;
     font-size: 18px;
     color: skyblue;
     line-height: 50px;
@@ -128,10 +123,8 @@ body {
     width: 100%;
     text-decoration: none;
     display: block;
-    /* padding-left: 20px; */
     text-indent: 20px;
     height: 50px;
-    /* margin-bottom: 15px; */
     border-radius: 5px;
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -144,8 +137,8 @@ body {
 .pic-nav {
     position: absolute;
     top: 10%;
-    left: -80%;
-    width: 100%;
+    left: -70%;
+    width: 90%;
     font-size: 18px;
     color: skyblue;
     line-height: 50px;
@@ -157,10 +150,8 @@ body {
     width: 100%;
     text-decoration: none;
     display: block;
-    /* padding-left: 20px; */
     text-indent: 30px;
     height: 50px;
-    /* margin-bottom: 15px; */
     border-radius: 5px;
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -188,45 +179,100 @@ body {
 }
 
 .searchBar {
-    width: 80%;
-    height: 10%;
+    width: 20%;
+    height: 100%;
     min-height: 20px;
-    /* margin-left: 10%; */
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
+    position: relative;
+    left: 0;
+    line-height: 36.19px;
 }
 
 .searchBar input {
-    height: 50%;
+    height: 80%;
     width: 75%;
     outline: none;
 }
 
-.searchBar button {
-    height: 50%;
+.searchBar .search {
+    height: 90%;
     width: 20%;
+    border: 1px solid #ccc;
 }
 
-.searchState {
-    height: 45%;
-    width: 100%;
+.tools {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 25%;
+    height: 100%;
+    line-height: 36.19px;
+}
+
+.tools button {
+    height: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    margin-top: 1px;
 }
 
 .info-bar {
     position: absolute;
-    bottom: 20%;
+    bottom: 0;
     left: 10%;
-    height: 10%;
+    height: 30%;
     width: 80%;
+    background-color:#ccc;
+    border: 1px solid #ccc;
 }
 
-.info-bar button {
-    height: 50%;
+.info-bar .info-name {
+    height: 30px;
     width: 100%;
+    line-height: 30px;
+    font-weight: bold;
 }
 
 .info-bar .info {
-    height: 50%;
+    height: calc(100% - 30px);
     width: 100%;
+    overflow-y: scroll;
+    background-color: aliceblue;
+}
+
+.group-info,.courses-info,.contact-info,.tools-used-info {
+    display: none;
+    border: 1px solid #ccc;
+}
+
+.city-info {
+    position: absolute;
+    display: none;
+    bottom: 15%;
+    right: 0;
+    width: 250px;
+    height: 200px;
+    background-color: #ccc;
+    z-index: 999;
+}
+
+.city-info .info-name {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.city-info .info-content {
+    height: calc(100% - 30px);
+    line-height: 30px;
+    background-color: aliceblue;
+    overflow-y: scroll;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

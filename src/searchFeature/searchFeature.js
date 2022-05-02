@@ -1,6 +1,6 @@
 import { Feature } from "ol";
 import VectorLayer from "ol/layer/Vector";
-import { map } from "./src/init/initMap"
+import { map } from "../init/initMap"
 
 export var getFeature = function (layer, attr) {
     var source = layer.getSource();
@@ -11,7 +11,7 @@ export var getFeature = function (layer, attr) {
         pattern = pattern + (words[i] + ".*");
     var keyword = new RegExp(pattern);
     for (var j = 0; j < features.length; j++) {
-        var name = String(features[j].get('name')).trim();
+        var name = String(features[j].get('cityname')).trim();
         if (name.match(keyword))
         {
             return features[j];
